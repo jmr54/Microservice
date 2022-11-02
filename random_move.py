@@ -10,7 +10,7 @@ def get_move():
     req_data = request.get_json()
     array = req_data['array']
     our_number = random.choice(array)
-    if request.method == "POST":
+    if request.method == "GET":
         if our_number in array:
             array.remove(our_number)
             new_array = array
